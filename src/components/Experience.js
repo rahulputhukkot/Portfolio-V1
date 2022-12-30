@@ -3,10 +3,8 @@ import Timeline from './Timeline';
 
 export default function CareerAndEducation() {
   return (
-    <section id="careers">
-      <h1>
-        Careers and Education
-      </h1>
+    <section id="experience">
+      <h1>Experience</h1>
       <Timeline data={dataValues.dummyData} />
     </section>
   );
