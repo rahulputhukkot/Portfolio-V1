@@ -1,0 +1,222 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  /* padding-top: 3em; */
+  margin-top: 3em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar-container {
+  /* align-items: center; */
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+  /* overflow: hidden; */
+  /* background-color: #112747; */
+  background-image: linear-gradient(#094944, #0a192f);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 10em;
+}
+
+.navbar-container a {
+  float: left;
+  color: aquamarine;
+  text-align: center;
+  padding: 1% 2%;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar-container a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+#home:before,
+#about::before,
+#skills::before,
+#careers::before,
+#projects::before {
+  display: block;
+  content: "";
+  height: 50px;
+  margin: -50px 0 0;
+}
+
+/* Timeline component*/
+
+.timeline {
+margin: 0 auto;
+max-width: 750px;
+padding: 25px;
+display: grid;
+grid-template-columns: 1fr 3px 1fr;
+font-family: 'Fira Sans', sans-serif;
+color: #fff;
+}
+
+.timeline-component {
+  margin: 0 20px 20px 20px;
+}
+
+.timeline-component--bg{
+  padding: 1.5em;
+  background: rgba(9,61,62,.5);
+  box-shadow:  20px 20px 4px rgba(0, 0, 9, 0.3);
+  border-radius: 10px;
+}
+.timeline-date--right {
+  text-align: right;
+}
+
+.timeline-middle {
+  position: relative;
+  background: white;
+}
+
+.timeline-point {
+  position: absolute;
+  top:0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.timeline-point-bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+.timeline-paragraph {
+  line-height: 1.5;
+}
+
+/* Skills component*/
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
+.skills-item {
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+  padding-left: 50%;
+}
+
+/* Project component*/
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
+
+.project-item {
+  padding: 0;
+  display: block;
+  max-width:300px;
+  max-height:300px;
+  width: auto;
+  height: auto;
+  transform-origin: 50% 65%;
+  transition: transform 3s, filter 3s ease-in-out;
+  filter: brightness(150%);
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.project-item:hover {
+  filter: brightness(100%);
+  transform: scale(1.5);
+}
+
+.project-item-box {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+}
+
+.project-item-box:hover .project-item {
+  opacity: 0.3;
+}
+.project-item-box:hover .project-title-center {
+  opacity: 1;
+}
+
+.project-item-box:hover .project-description ,
+.project-item-box:hover .project-title {
+  visibility: visible;
+}
+
+.project-title-center {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  color: white;
+  font-size: 16px;
+  /* pointer-events: hover; */
+  pointer-events: none 
+  /* transform: translate(-50%, -50%); */
+  /* -ms-transform: translate(-50%, -50%); */
+  /* text-align: center; */
+}
+.project-title {
+  transform: translate(-25%, -50%); 
+  -ms-transform: translate(-25%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+} 
+
+.project-description {
+  /* color: white;
+  font-size: 16px; */
+  visibility: hidden;
+}
+
+.project-link {
+  color: white;
+  font-size: 16px;
+  top:55%;
+  left:-30%;
+  pointer-events: auto 
+  /* z-index: 9999; */
+}
+
